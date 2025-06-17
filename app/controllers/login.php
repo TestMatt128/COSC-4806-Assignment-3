@@ -1,5 +1,7 @@
 <?php
 
+require_once 'core/Controller.php';
+
 class Login extends Controller {
 
     public function index() {		

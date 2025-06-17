@@ -14,12 +14,13 @@ class App {
         } 
 
         // This will return a broken up URL
+        else if (isset($_SESSION['auth']) == 0)
         // it will be /controller/method
         $url = $this->parseUrl();
 
-        /* if controller exists in the URL, then go to it
-         * if not, then go to this->controller which is defaulted to home 
-         */
+        // if controller exists in the URL, then go to it
+        // if not, then go to this->controller which is defaulted to home 
+         
 
         if (file_exists('app/controllers/' . $url[1] . '.php')) {
             $this->controller = $url[1];
