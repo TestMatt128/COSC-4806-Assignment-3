@@ -15,7 +15,7 @@ define('FILES', ROOT . DS. 'files');
 
 // ---------------------  NEW DATABASE TABLE -------------------------
 define('DB_HOST',         '61e7o.h.filess.io');
+define('DB_DATABASE',     'COSC4806_childfloor');
 define('DB_USER',         'COSC4806_childfloor'); 
 define('DB_PASS',         $_ENV['DB_PASS']);
-define('DB_DATABASE',     'COSC4806_childfloor');
 define('DB_PORT',         '3305');
