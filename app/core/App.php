@@ -14,7 +14,6 @@ class App {
         } 
 
         // This will return a broken up URL
-        else if (isset($_SESSION['auth']) == 0)
         // it will be /controller/method
         $url = $this->parseUrl();
 
