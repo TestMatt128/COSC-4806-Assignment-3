@@ -19,6 +19,7 @@ class Login extends Controller {
 					$_SESSION['failedAuth'] ++; // +1 to the failed attempt counter.
 					print("Failed attempts: " . $_SESSION['failedAuth'] );
 				}
+					// If failed attempts are 3 or more, lockout for 60 seconds.
 				else if ($_SESSION['failedAuth'] >= 3)
 					print("Failed attempts: " . $_SESSION['failedAuth'] . " - You are locked out from signing in. Please wait after 60 seconds.");
 				// Lockout for 60 seconds.

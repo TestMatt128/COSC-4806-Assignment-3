@@ -35,7 +35,7 @@ class App {
             }
             unset($url[1]);
         } else {
-            header('Location: /home');
+            header('Location/home');
             die;
         }
 
