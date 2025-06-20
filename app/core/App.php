@@ -62,7 +62,9 @@ class App {
     public function parseUrl() {
         $u = "{$_SERVER['REQUEST_URI']}";
         $url = explode('/', filter_var(rtrim($u, '/'), FILTER_SANITIZE_URL));
-		unset($url[0]);
+        if (isset($url[0]) && $url[0] === "") {
+            unset($url[0]);
+        }
 		return $url;
     }
 

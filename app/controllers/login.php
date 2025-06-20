@@ -4,11 +4,14 @@ require_once 'core/Controller.php';
 
 class Login extends Controller {
 
-    public function index() {		
+	/**
+	*@return void
+	*/
+    public function index() :void{		
 	    $this->view('login/index');
     }
     
-    public function verify(){
+    public function verify() :void{
 			$username = $_REQUEST['username'];
 			$password = $_REQUEST['password'];
 			$username = strtolower($username);
