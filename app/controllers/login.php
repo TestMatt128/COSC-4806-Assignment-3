@@ -18,6 +18,7 @@ class Login extends Controller {
 
 			// Failed attempt counter.
 			if(isset($_SESSION['failedAuth'])){
+				// If failed attempts are less than 3, increment the counter, warning the user.
 				if($_SESSION['failedAuth'] < 3){
 					$_SESSION['failedAuth'] ++; // +1 to the failed attempt counter.
 					print("Failed attempts: " . $_SESSION['failedAuth'] );
