@@ -58,12 +58,9 @@ class App {
         $this->params = $url ? array_values($url) : [];
         call_user_func_array([$this->controller, $this->method], $this->params);		
     }
-    /**
-     * @return string[]|bool
-     */
+    
     public function parseUrl() {
         $u = "{$_SERVER['REQUEST_URI']}";
-        // trims the trailing forward slash (rtrim), sanitizes URL, explode it by forward slash to get elements
         $url = explode('/', filter_var(rtrim($u, '/'), FILTER_SANITIZE_URL));
 		unset($url[0]);
 		return $url;
