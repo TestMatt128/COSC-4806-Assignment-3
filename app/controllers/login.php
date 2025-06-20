@@ -26,6 +26,9 @@ class Login extends Controller {
 					sleep(60);
 			}
 			if(isset($_SESSION['auth']) == 1){
+				// If user is already signed in, redirect to home page.
+				// As a bonus, print out the number of failed attempts it took to sign in. This is stored in the session.
+				print("Welcome back " + $_SESSION['username'] + "! It took you " + $_SESSION['failedAuth'] + "to sign in.");
 				header('Location: /home');
 			}
 			$user = $this->model('User');
